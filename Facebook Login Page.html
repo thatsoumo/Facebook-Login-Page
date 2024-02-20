@@ -1,0 +1,117 @@
+<title>Facebook Login Page</title>
+<style>
+    h2{
+        text-align: center;
+        color:blue;
+    }
+    .topic{
+       
+    margin-top:60px;
+    border:2px solid black;
+    width:500px;
+    padding:45px;
+    position:absolute;
+    top:15%;
+    left:30%;
+    border-radius:50px;
+    height:auto;
+}
+    
+    .box{
+    width: 50%;
+    height:25px;
+    border-radius:5px;
+    margin-top:5px;
+    padding:10px;
+    left:28%;
+    position:relative;
+
+}
+.form-label{
+    left:45% ;
+    position: relative;
+}
+.btn{
+    position: relative;
+    left:32%;
+    width:200px;
+    height:30px;
+    border-radius: 10px;
+    color:rgb(230, 173, 173);
+    background-color: blue;
+    cursor:pointer;
+}
+h1{
+    text-align:center;
+    color:blue;
+    right:5%;
+    position:relative;
+    padding:5%;
+}
+nav a{
+    position:relative;
+    left:22%;
+    cursor: pointer;
+    padding:0 8px;
+}
+footer{
+    bottom:-600px;
+    position: relative;
+    left:42%;
+}
+*{
+    background-color:rgb(230, 194, 173);
+}
+</style>
+<h1>facebook</h1>
+<div class="topic">
+<div class="text-center">
+
+<h2>Log in to facebook</h2>
+
+</div>
+
+<form>
+    <label class="form-label"></label>
+    <br>
+    <input type="username"placeholder="Enter your username" class="box" id="username" autofocus="" maxlength="10">
+    <br>
+    <label class="form-label"></label>
+    <br>
+    <input type="Password" placeholder="Enter your password" class="box" id="password" autofocus="" maxlength="20">
+    <br><br>
+    <button type="button" class="btn" onClick="getInfo()">Login </button>
+    <br><br>
+    <nav>
+    <a href="#">Forgot Password ?</a>
+    <a href="#">Sign Up for facebook</a>
+    </nav>
+
+</form>
+</div>
+<footer>
+   Copyright Meta 2024
+</footer>
+<script>
+  var objUser=[
+  {
+username :"soumoee",
+password :"Sweetie",
+}
+
+]
+function getInfo(){
+    var username=document.getElementById("username").value;
+    var password=document.getElementById("password").value;
+
+   for(i=0;i<objUser.length;i++)
+    {//get length of user
+    if(username==objUser[i].username && password == objUser[i].password){//match username and password
+      console.log(username+"is logged in")
+      return//brake the loop
+    }
+   }
+   console.log("incorect username or password")
+}
+
+</script>
